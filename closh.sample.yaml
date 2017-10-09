@@ -1,0 +1,13 @@
+---
+
+compute:
+  provider: AWS
+  aws_access_key_id: <%= ENV["AWS_ACCESS_KEY_ID"] %>
+  aws_secret_access_key: <%= ENV["AWS_SECRET_ACCESS_KEY"] %>
+  ssh_key_path: ~/.ssh/id_rsa.pub
+  region: us-west-2
+
+server:
+  image_id: ami-70728c08 # ubuntu 17.04 amd64 hvm:ebs-ssd
+  flavor_id: t2.micro
+  username: ubuntu
