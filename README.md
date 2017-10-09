@@ -84,7 +84,6 @@ compute:
   provider: AWS
   aws_access_key_id: <%= ENV["AWS_ACCESS_KEY_ID"] %>
   aws_secret_access_key: <%= ENV["AWS_SECRET_ACCESS_KEY"] %>
-  ssh_key_path: ~/.ssh/id_rsa.pub
   region: us-west-2
 
 server:
