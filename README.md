@@ -22,7 +22,7 @@ Usage
 
 Run a command in the cloud:
 
-    $ closh -vx "cut -d . -f 1 /proc/uptime"
+    $ closh -x "cut -d . -f 1 /proc/uptime"
     23
 
 More verbose:
