@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.version     = CloudShell::VERSION
   s.license     = "MIT"
   s.summary     = "A shell running in the cloud"
-  s.description = "Run shell commands in the cloud"
+  s.description = "Closh automatically bootstrap servers in the cloud to run shell commands"
   s.homepage    = "https://github.com/vinc/closh"
   s.email       = "v@vinc.cc"
   s.authors     = ["Vincent Ollivier"]
