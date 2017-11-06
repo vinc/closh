@@ -2,6 +2,7 @@ Cloud Shell
 ===========
 
 [![Gem](https://img.shields.io/gem/v/closh.svg)](https://rubygems.org/gems/closh)
+[![Travis branch](https://img.shields.io/travis/vinc/closh/master.svg)](https://travis-ci.org/vinc/closh/branches)
 [![Gemnasium](https://img.shields.io/gemnasium/vinc/closh.svg)](https://gemnasium.com/github.com/vinc/closh)
 
 Get shell running in the cloud in seconds
