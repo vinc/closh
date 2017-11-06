@@ -7,10 +7,9 @@ require "yaml"
 module CloudShell
   module CLI
     def self.run
-      opts = self.parse_opts(ARGV)
+      opts = parse_opts(ARGV)
 
-      config_path = File.expand_path(opts[:config])
-      config = YAML.load(ERB.new(File.read(config_path)).result).deep_symbolize_keys
+      config = load_config(File.expand_path(opts[:config]))
 
       shell = CloudShell::Session.new(config, opts)
 
@@ -40,6 +39,10 @@ module CloudShell
       ensure
         shell.destroy_server if opts[:kill]
       end
+    end
+
+    def self.load_config(path)
+      YAML.safe_load(ERB.new(File.read(path)).result).deep_symbolize_keys
     end
 
     private
