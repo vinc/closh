@@ -25,6 +25,7 @@ module CloudShell
     def list_servers
       debug("listing servers on #{@provider} ...")
       @compute.servers.each do |server|
+        next unless server.ready?
         puts server.public_ip_address if server.public_ip_address
       end
     end
