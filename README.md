@@ -1,7 +1,9 @@
 Cloud Shell
 ===========
 
-A shell running in the cloud
+Get shell running in the cloud in seconds
+
+[![asciicast](https://asciinema.org/a/146126.png)](https://asciinema.org/a/146126)
 
 
 Installation
