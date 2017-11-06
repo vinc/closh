@@ -1,6 +1,9 @@
 Cloud Shell
 ===========
 
+[![Gem](https://img.shields.io/gem/v/closh.svg)](https://rubygems.org/gems/closh)
+[![Gemnasium](https://img.shields.io/gemnasium/vinc/closh.svg)](https://gemnasium.com/github.com/vinc/closh)
+
 Get shell running in the cloud in seconds
 
 [![asciicast](https://asciinema.org/a/146126.png)](https://asciinema.org/a/146126)
