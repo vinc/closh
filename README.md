@@ -5,7 +5,7 @@ Cloud Shell
 [![Travis branch](https://img.shields.io/travis/vinc/closh/master.svg)](https://travis-ci.org/vinc/closh/branches)
 [![Gemnasium](https://img.shields.io/gemnasium/vinc/closh.svg)](https://gemnasium.com/github.com/vinc/closh)
 
-Get shell running in the cloud in seconds
+Get a shell running in the cloud in seconds
 
 [![asciicast](https://asciinema.org/a/146126.png)](https://asciinema.org/a/146126)
 
