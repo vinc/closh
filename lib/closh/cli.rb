@@ -45,14 +45,12 @@ module CloudShell
       YAML.safe_load(ERB.new(File.read(path)).result).deep_symbolize_keys
     end
 
-    private
-
     def self.parse_opts(args)
-      Trollop::options(ARGV) do
+      Trollop.options(ARGV) do
         version "Cloud Shell v#{CloudShell::VERSION}"
         usage "<command>"
         opt :dry_run, "Create fake server and run locally", short: "n"
-        opt :config,  "Config file", type: :string, default: "~/.closh.yaml"
+        opt :config,  "Config file", type: :string, default: "~/.closh.yml"
         opt :key,     "SSH public key", type: :string, default: "~/.ssh/id_rsa.pub"
         opt :resume,  "Resume session", type: :string
         opt :kill,    "Kill session at the end", short: "x"

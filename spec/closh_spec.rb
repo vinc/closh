@@ -7,7 +7,7 @@ RSpec.describe CloudShell do
     ENV["AWS_ACCESS_KEY_ID"] = "secret"
 
     # Read YAML config
-    path = File.join(File.dirname(__FILE__), "../closh.sample.yaml")
+    path = File.join(File.dirname(__FILE__), "../closh.sample.yml")
     @config = CloudShell::CLI.load_config(path)
 
     # Create SSH key

@@ -16,10 +16,9 @@ module CloudShell
     end
 
     def upload_ssh_key(key)
-      if @compute.key_pairs.get(@key_name).nil?
-        debug("uploading SSH public key to #{@provider} ...")
-        @compute.import_key_pair(@key_name, key)
-      end
+      return if @compute.key_pairs.get(@key_name).present?
+      debug("uploading SSH public key to #{@provider} ...")
+      @compute.import_key_pair(@key_name, key)
     end
 
     def list_servers
@@ -43,7 +42,7 @@ module CloudShell
 
     def create_server
       debug("creating server on #{@provider} ...")
-      config = @config[:server].merge({ key_name: @key_name })
+      config = @config[:server].merge(key_name: @key_name)
       @username = config[:username] || "root"
       @server = @compute.servers.create(config)
       @server.wait_for { ready? }
@@ -63,7 +62,7 @@ module CloudShell
         Net::SSH.start(@server.public_ip_address, @username) do |ssh|
           ssh.open_channel do |channel|
             debug("executing command `#{command}` ...")
-            channel.exec(command) do |_, success|
+            channel.exec(command) do
               channel.on_data do |_, data|
                 print data
               end
