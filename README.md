@@ -105,4 +105,4 @@ server:
 License
 -------
 
-Copyright (C) 2017 Vincent Ollivier. Released under MIT.
+Copyright (c) 2017-2018 Vincent Ollivier. Released under MIT.
